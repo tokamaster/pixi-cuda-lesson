@@ -1,0 +1,21 @@
+[workspace]
+channels = ["conda-forge"]
+name = "example"
+platforms = ["osx-arm64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[tasks.lab]
+description = "Launch Jupyter Lab"
+cmd = "jupyter lab"
+
+[tasks.start]
+description = "Start exploring"
+depends-on = ["lab"]
+
+[dependencies]
+python = ">=3.13.5,<3.14"
+numpy = ">=2.3.2,<3"
+notebook = ">=7.4.5,<8"
+jupyterlab = ">=4.4.5,<5"

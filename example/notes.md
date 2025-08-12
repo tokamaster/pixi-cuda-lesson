@@ -1,0 +1,1 @@
+`pixi shell` launches the pixi environment, similar to mla,conac.
